@@ -1,38 +1,114 @@
-<div class="container mx-auto">
-    <div class="md:flex mt-8 md:-mx-4">
-        <div class=" grid md:grid-cols-2 grid-cols-1 md:gap-10 gap-4 mx-auto">
+<div 
+style="background-color: {{section.settings.background_color}};"
+class=" 
+    spacing-vertical-{{section.settings.spacing_vertical_mobile}}
+    spacing-vertical-lg-{{section.settings.spacing_vertical_desktop}}
+    spacing-horizontal-{{section.settings.spacing_horizontal_mobile}}
+    spacing-horizontal-lg-{{section.settings.spacing_horizontal_desktop}}
+">
+    <div class="wrapper">
+        <div class="grid col-count-{{section.settings.column_count_mobile}} col-count-lg-{{section.settings.column_count_desktop}} col-gap-{{section.settings.column_gap}}">
             {% for block in section.blocks %}
-                {% if block.type == 'collection' %}
-                    <div class="w-full h-64 mt-8 md:mx-4 rounded-md overflow-hidden bg-cover bg-center md:mt-0" style="background-image: url({{block.settings.background_image | img_url: 'master'}})">
-                        <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
-                            <div class="px-10 max-w-xl">
-                                {% if block.settings.title != blank %}
-                                <h2 class="text-2xl text-white font-semibold">{{block.settings.title}}</h2>
-                                {% endif %}
-                                
-                                {% if block.settings.subtitle != blank %}
-                                <div class="mt-2 text-gray-400">{{block.settings.subtitle}}</div>
-                                {% endif %}
-                                
-                                {% if block.settings.button_text != blank %}
-                                <a href="{{block.settings.button_url}}" class=" bg-indigo-600 text-white px-4 py-2 rounded-md flex items-center space-x-1 w-max mt-4">
-                                    <span>{{block.settings.button_text}}</span>
-                                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                                </a>
-                                 {% endif %}
-                            </div>
+                <div class="bg-center bg-cover overflow-hidden min-h-[250px] rounded-md" style="background-image: url({{block.settings.background_image | img_url: 'master'}})">
+                    <div class="flex items-center h-full bg-gray-900 bg-opacity-50">
+                        <div class="max-w-xl px-10">
+                            {% if block.settings.title != blank %}
+                            <h2 class="text-2xl font-semibold text-white">{{block.settings.title}}</h2>
+                            {% endif %}
+                            
+                            {% if block.settings.subtitle != blank %}
+                            <div class="mt-2 text-gray-400">{{block.settings.subtitle}}</div>
+                            {% endif %}
+                            
+                            {% if block.settings.button_text != blank %}
+                            <a href="{{block.settings.button_url}}" class="flex items-center mt-4 text-sm font-medium text-white uppercase rounded hover:underline focus:outline-none">
+                                <span>{{block.settings.button_text}}</span>
+                                <svg class="w-5 h-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                            </a>
+                            {% endif %}
                         </div>
                     </div>
-                {% endif %}
+                </div>
             {% endfor %}
         </div>
     </div>
 </div>
 
-
 {% schema %}
 {
-   "name":"collection-list",
+    "name":"collection-list",
+    "settings": [
+        {
+            "type": "color",
+            "id": "background_color",
+            "label": "Background Color",
+            "default": "#ffffff",
+            "info": "Section Background Color"
+        },
+        {
+            "type": "range",
+            "id": "column_gap",
+            "label": "Column Gap",
+            "min": 1,
+            "max": 10,
+            "step": 1,
+            "default": 1
+        },
+        {
+            "type": "range",
+            "id": "column_count_mobile",
+            "label": "Mobile: Column Count",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "default": 1
+        },
+        {
+            "type": "range",
+            "id": "column_count_desktop",
+            "label": "Desktop: Column Count",
+            "min": 1,
+            "max": 12,
+            "step": 1,
+            "default": 2
+        },
+        {
+            "type": "range",
+            "id": "spacing_horizontal_mobile",
+            "label": "Mobile: Horizontal Spacing",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "spacing_horizontal_desktop",
+            "label": "Desktop: Horizontal Spacing",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "spacing_vertical_mobile",
+            "label": "Mobile: Vertical Spacing",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 0
+        },
+        {
+            "type": "range",
+            "id": "spacing_vertical_desktop",
+            "label": "Desktop: Vertical Spacing",
+            "min": 0,
+            "max": 12,
+            "step": 1,
+            "default": 6
+        }
+    ],
    "blocks":[
       {
          "name":"Collection",
@@ -71,17 +147,6 @@
                "label":"Button Url"
             }
          ]
-      },
-      {
-         "name": "test",
-         "type": "test",
-            "settings": [
-                {
-                    "id": "test-0-14",
-                    "label": "Test",
-                    "type": "text"
-                }
-            ]
       }
    ]
 }

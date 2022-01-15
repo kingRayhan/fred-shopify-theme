@@ -1,17 +1,21 @@
-<div class="container mx-auto">
-    <div class="h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url({{section.settings.background_image | img_url: 'master'}})">
-        <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
-            <div class="px-10 max-w-xl">
+<div class="wrapper">
+    <div 
+    style="background-image: url({{section.settings.background_image | img_url: "master"}})"
+    class="h-64 overflow-hidden bg-center bg-cover rounded-md hero-area">
+        <div class="flex items-center h-full bg-gray-900 bg-opacity-50">
+            <div class="max-w-xl px-10">
                 {% if section.settings.title != blank %}
-                <h2 class="text-2xl text-white font-semibold">{{section.settings.title}}</h2>
+                <h2 class="text-2xl font-semibold text-white">{{section.settings.title}}</h2>
                 {% endif %}
+                
                 {% if section.settings.subtitle != blank %}
-                    <div class="mt-2 text-gray-400">{{section.settings.subtitle}}</div>
+                    <div class="mt-2 text-slate-300">{{section.settings.subtitle}}</div>
                 {% endif %}
+                
                 {% if section.settings.button_text != blank %}
-                <a href="{{section.settings.button_url}}" class=" bg-indigo-600 text-white px-4 py-2 rounded-md flex items-center space-x-1 w-max mt-4">
+                <a href="{{section.settings.button_url}}" class="flex items-center px-4 py-2 mt-4 space-x-1 text-white bg-indigo-600 rounded-md w-max">
                     <span>{{section.settings.button_text}}</span>
-                    <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                    <svg class="w-5 h-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
                 </a>
                 {% endif %}
             </div>

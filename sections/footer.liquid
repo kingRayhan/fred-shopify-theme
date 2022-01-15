@@ -1,3 +1,23 @@
-<footer class=" flex justify-center">
-    <p class="text-slate-500">All right reserved</p>
+{% if section.settings.text != blank %}
+<footer class="flex justify-center my-10">
+    <div class="text-slate-500">
+        {{section.settings.text}}
+    </div>
 </footer>
+{% endif %}
+
+{% schema %}
+{
+   "name": "Footer Section",
+   "limit": 1,
+  "settings": [
+        {
+            "type": "richtext",
+            "id": "text",
+            "label": "Text",
+            "default": "<p>All right reserved</p>"
+        }
+  ]
+
+}
+{% endschema %}
