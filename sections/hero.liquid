@@ -1,13 +1,19 @@
 <div class="container mx-auto">
-    <div class="h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1577655197620-704858b270ac?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1280&amp;q=144')">
+    <div class="h-64 rounded-md overflow-hidden bg-cover bg-center" style="background-image: url({{section.settings.background_image | img_url: 'master'}})">
         <div class="bg-gray-900 bg-opacity-50 flex items-center h-full">
             <div class="px-10 max-w-xl">
-                <h2 class="text-2xl text-white font-semibold">Sport Shoes</h2>
-                <p class="mt-2 text-gray-400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>
-                <button class="flex items-center mt-4 px-3 py-2 bg-blue-600 text-white text-sm uppercase font-medium rounded hover:bg-blue-500 focus:outline-none focus:bg-blue-500">
-                    <span>Shop Now</span>
+                {% if section.settings.title != blank %}
+                <h2 class="text-2xl text-white font-semibold">{{section.settings.title}}</h2>
+                {% endif %}
+                {% if section.settings.subtitle != blank %}
+                    <div class="mt-2 text-gray-400">{{section.settings.subtitle}}</div>
+                {% endif %}
+                {% if section.settings.button_text != blank %}
+                <a href="{{section.settings.button_url}}" class=" bg-indigo-600 text-white px-4 py-2 rounded-md flex items-center space-x-1 w-max mt-4">
+                    <span>{{section.settings.button_text}}</span>
                     <svg class="h-5 w-5 mx-2" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24" stroke="currentColor"><path d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
-                </button>
+                </a>
+                {% endif %}
             </div>
         </div>
     </div>
@@ -19,7 +25,35 @@
    "limit": 2,
    "settings": [
         {
-            "name": "title",
+            "id": "title",
+            "label": "Title",
+            "type": "text",
+            "placeholder": "Primary title",
+            "default": "Sport Shoes"
+        },
+        {
+            "id": "subtitle",
+            "label": "Sub title",
+            "type": "richtext",
+            "default": "<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore facere provident molestias ipsam sint voluptatum pariatur.</p>"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background image"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "button Text",
+            "default": "Shop Now",
+            "info": "Button text",
+            "placeholder": "Button text"
+        },
+        {
+            "type": "url",
+            "id": "button_url",
+            "label": "Button Url"
         }
    ],
    "presets": [
