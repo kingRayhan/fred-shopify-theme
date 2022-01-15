@@ -1,0 +1,15 @@
+{
+    "name": "Home Page",
+    "sections": {
+        "hero": {
+            "type": "hero"
+        },
+        "collections": {
+            "type": "collection-list"
+        }
+    },
+    "order": [
+        "hero",
+        "collections"
+    ]
+}
