@@ -1,0 +1,12 @@
+{
+    "name": "Page Template",
+    "layout": "page",
+    "sections": {
+        "main": {
+            "type": "page-content"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

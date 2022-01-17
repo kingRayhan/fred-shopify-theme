@@ -26,6 +26,10 @@
   }
 }
 
+[x-cloak] {
+  display: none !important;
+}
+
 @for $i from 1 through 12 {
   .spacing-vertical-#{$i} {
     @apply py-#{$i};
