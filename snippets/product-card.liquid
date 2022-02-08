@@ -1,12 +1,19 @@
-<div class="w-80">
-    <img src="http://placehold.it/300x400" alt="">
-    <div class="mt-6">
-        <h3 class="text-xl uppercase">{{ product.title }}</h3>
-        <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, quo vel! Officiis placeat.</p>
+<div class="p-6 md:w-80">
+    <img 
+        src="{{ product.featured_media | img_url: 'master' }}" alt="{{product.featured_media.alt}}" 
+        class="hidden object-cover w-full h-96 md:block">
+    <div class="mt-4">
+        <h3 class="uppercase md:text-xl">
+            <a href="{{product.handle}}">
+                {{product}}
+                <span class="font-light">
+                    {{product.price | money}}
+                </span>
+            </a>
+        </h3>
+        <p class="text-base">
+            {{product.description}}
+            <a href="{{ product.url }}" class="text-cyan-500">More information</a>
+        </p>
     </div>
 </div>
-
-
-<pre>   
-    {{product}}
-</pre>

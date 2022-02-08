@@ -1,46 +1,44 @@
 <div class="grid grid-cols-2 section-id-{{section.id}}">
+    {% if section.settings.product != blank %}
     <div class="grid place-content-center">
-        {% render 'product-card' product: section.settings.product.handle %}
+        {% render 'product-card' product: section.settings.product %}
     </div>
-    <div class="bg-red-500 h-[70vh] image bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}"></div>
+    {% endif %}
+    <div class="image bg-cover bg-center md:max-h-[850px] max-h-[650px] {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image | img_url: 'master'}}" alt="{{section.settings.image.alt}}">
+    </div>
 </div>
-
-{%- style -%}
-.section-id-{{section.id}} .image{
-    background-image: url({{section.settings.image | img_url: "master"}});
-}
-{%- endstyle -%}
 
 {% schema %}
 {
     "name": "Product",
     "settings": [
-       {
-           "type": "image_picker",
-           "id": "image",
-           "label": "Image"
-       },
-      {
-          "type": "product",
-          "id": "product",
-          "label": "Select Product"
-      },
-      {
-          "type": "radio",
-          "id": "image_position",
-          "label": "Image Position",
-          "default": "right",
-          "options": [
-              {
-                  "value": "left",
-                  "label": "Left Side"
-              },
-              {
-                  "value": "right",
-                  "label": "Right Side"
-              }
-          ]
-      }
+        {
+            "type": "image_picker",
+            "id": "image",
+            "label": "Image"
+        },
+        {
+            "type": "product",
+            "id": "product",
+            "label": "Select Product"
+        },
+        {
+            "type": "radio",
+            "id": "image_position",
+            "label": "Image Position",
+            "default": "right",
+            "options": [
+                {
+                    "value": "left",
+                    "label": "Left Side"
+                },
+                {
+                    "value": "right",
+                    "label": "Right Side"
+                }
+            ]
+        }
     ],
     "presets": [
         {

@@ -3,13 +3,9 @@
     "sections": {
         "banner": {
             "type": "banner"
-        },
-        "collections": {
-            "type": "collection-list"
         }
     },
     "order": [
-        "banner",
-        "collections"
+        "banner"
     ]
 }

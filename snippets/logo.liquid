@@ -1,0 +1,7 @@
+<a href="{{shop.url}}" class="text-3xl">
+    {% if has_logo %}
+        <img src="{{logo | img_url: 'master'}}" alt="">
+    {% else %}
+        {{shop.name}}
+    {% endif %}
+</a>

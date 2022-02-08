@@ -1,0 +1,77 @@
+<div class="grid grid-cols-2">
+    <div class="group relative bg-cover bg-center md:max-h-[850px] max-h-[650px] {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_left | img_url: 'master'}}" alt="{{section.settings.image_left.alt}}">
+        <div class="absolute top-0 bottom-0 left-0 right-0 grid transition-opacity duration-500 opacity-0 group-hover:opacity-100 bg-slate-800 bg-opacity-30 place-content-center">
+            <div class="max-w-[70%] mx-auto text-center text-white">
+                {% if section.settings.left_content_title != blank %}
+                    <h2 class="text-xl uppercase">{{ section.settings.left_content_title }}</h2>
+                {% endif %}
+
+                {% if section.settings.left_content != blank %}
+                    <div class="line-clamp-5 md:line-clamp-none">
+                        {{section.settings.left_content}}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+    <div class="group relative bg-cover bg-center md:max-h-[850px] max-h-[650px] {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_right | img_url: 'master'}}" alt="{{section.settings.image_right.alt}}">
+        <div class="absolute top-0 bottom-0 left-0 right-0 grid transition-opacity duration-500 opacity-0 group-hover:opacity-100 bg-slate-800 bg-opacity-30 place-content-center">
+            <div class="max-w-[70%] mx-auto text-center text-white">
+                {% if section.settings.right_content_title != blank %}
+                    <h2 class="text-xl uppercase">{{ section.settings.right_content_title }}</h2>
+                {% endif %}
+
+                {% if section.settings.right_content != blank %}
+                    <div class="line-clamp-5 md:line-clamp-none">
+                        {{section.settings.right_content}}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Two Column Image",
+   "settings": [
+        {
+            "type": "image_picker",
+            "id": "image_left",
+            "label": "Image Left"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_right",
+            "label": "Image Right"
+        },
+        {
+            "type": "text",
+            "id": "left_content_title",
+            "label": "Left Content title"
+        },
+        {
+            "type": "richtext",
+            "id": "left_content",
+            "label": "Left Content"
+        },
+        {
+            "type": "text",
+            "id": "right_content_title",
+            "label": "Left Content title"
+        },
+        {
+            "type": "richtext",
+            "id": "right_content",
+            "label": "Right Content"
+        }
+   ],
+    "presets": [
+        {
+            "name": "Two Column Image"
+        }
+    ]
+}
+{% endschema %}
