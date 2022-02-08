@@ -1,0 +1,22 @@
+<div class="w-full h-screen bg-center bg-cover bg-slate-100 banner-section">
+</div>
+
+{%- style -%}
+   .banner-section{
+      background-image: url({{section.settings.banner_image | img_url: "master"}});
+   }
+{%- endstyle -%}
+
+
+{% schema %}
+{
+   "name": "Banner",
+   "settings": [
+      {
+         "type": "image_picker",
+         "id": "banner_image",
+         "label": "Image"
+      }
+   ]
+}
+{% endschema %}

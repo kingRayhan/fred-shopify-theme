@@ -1,0 +1,98 @@
+<div>
+    <div class="fixed top-0 left-0 flex justify-between w-full h-screen p-6 md:p-10">
+        <div class="justify-start h-full md:grid">
+            <nav class="flex-col hidden space-y-2 md:flex">
+                {% for link in section.settings.menu.links %}
+                <a class="uppercase {% if link.active %} underline {% endif %}" href="{{ link.url }}">{{link.title}}</a>
+                {% endfor %}
+            </nav>
+            <div class="justify-self-center"> 
+                <a href="{{shop.url}}">
+                    {% if section.settings.logo != blank %}
+                        <img src="{{section.settings.logo | img_url: 'medium'}}" alt="{{ shop.name }}">
+                    {% else %}
+                        <h1 class="text-xl md:text-3xl">
+                            {{ shop.name }}
+                        </h1>
+                    {% endif %}
+                </a>
+            </div>
+        </div>
+
+        <div class="">
+            <div class="flex">
+                <a href="#" class="flex items-center space-x-2">
+                    <span class="uppercase">cart</span>
+                    <span class="grid w-5 h-5 text-white rounded-full place-content-center bg-slate-800">
+                        1
+                    </span>
+                </a>
+                
+                <button @click="$store.mobileMenu.toggle()" class="ml-2 md:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-slate-800" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <!-- <div class="fixed z-50 flex flex-col items-center justify-between w-full h-screen py-8 bg-cyan-400">
+        <button @click="toggleMobileMenu()" class="absolute top-3 right-3">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" />
+            </svg>
+        </button>
+        <div> 
+            <h2>h: <span x-text="mobileMenuOpen"></span></h2>
+            <a href="{{shop.url}}">
+                {% if section.settings.logo != blank %}
+                    <img src="{{section.settings.logo | img_url: 'medium'}}" alt="{{ shop.name }}">
+                {% else %}
+                    <h1 class="text-xl md:text-3xl">
+                        {{ shop.name }}
+                    </h1>
+                {% endif %}
+            </a>
+        </div>
+        
+        <nav class="flex flex-col items-center space-y-2">
+            {% for link in section.settings.menu.links %}
+            <a class="uppercase {% if link.active %} underline {% endif %}" href="{{ link.url }}">{{link.title}}</a>
+            {% endfor %}
+        </nav>
+
+        <footer>
+            <p>Social Links</p>
+        </footer>
+    </div> -->
+</div>
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+{
+    "name": "Navigation",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "link_list",
+            "id": "menu",
+            "default": "main-menu",
+            "label": "Menu"
+        },
+        {
+            "type": "link_list",
+            "id": "mobile-menu",
+            "default": "main-menu",
+            "label": "Mobile Menu"
+        }
+    ]
+}
+{% endschema %}

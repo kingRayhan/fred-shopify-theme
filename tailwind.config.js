@@ -2,7 +2,11 @@ module.exports = {
   mode: "jit",
   content: ["./**/*.liquid"],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        accent: "#00bcd4",
+      },
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

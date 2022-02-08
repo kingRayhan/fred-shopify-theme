@@ -1,15 +1,15 @@
 {
     "name": "Home Page",
     "sections": {
-        "hero": {
-            "type": "hero"
+        "banner": {
+            "type": "banner"
         },
         "collections": {
             "type": "collection-list"
         }
     },
     "order": [
-        "hero",
+        "banner",
         "collections"
     ]
 }

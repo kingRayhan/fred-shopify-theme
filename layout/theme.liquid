@@ -8,13 +8,15 @@
     
     {{'theme.css' | asset_url | stylesheet_tag}}
     {{content_for_header}}
-    <script src="//unpkg.com/alpinejs" defer></script>
   </head>
   <body class="{{ template }}">
-    {% section 'header' %}
+    {% section 'navigation' %}
     <main>
       {{content_for_layout}}
     </main>
     {% section 'footer' %}
+    
+    {{'//unpkg.com/alpinejs' | script_tag}}
+    {{'theme.js' | asset_url | script_tag}}
   </body>
 </html>
