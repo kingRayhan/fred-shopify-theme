@@ -1,23 +1,44 @@
-{% if section.settings.text != blank %}
-<footer class="flex justify-center my-10">
-    <div class="text-slate-500">
-        {{section.settings.text}}
-    </div>
+<footer class="{{section.id}} bg-slate-300 h-16">
+    <nav class="flex space-x-4">
+        <a href="#">shop</a>
+        <a href="#">about</a>
+        <a href="#">shipping & returning</a>
+        <a href="#">size guide</a>
+        <a href="#">journal</a>
+    </nav>
 </footer>
-{% endif %}
 
 {% schema %}
 {
-   "name": "Footer Section",
-   "limit": 1,
-  "settings": [
+    "name": "Footer",
+    "settings": [
+        {
+            "type": "color",
+            "id": "bg_color",
+            "label": "Background Color",
+            "default": "#ddd",
+            "info": "Footer background color"
+        },
+        {
+            "type": "link_list",
+            "id": "primary_menu",
+            "label": "Footer Primary Menu"
+        },
+        {
+            "type": "link_list",
+            "id": "secondary_menu",
+            "label": "Footer Secondary Menu"
+        },
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
         {
             "type": "richtext",
-            "id": "text",
-            "label": "Text",
-            "default": "<p>All right reserved</p>"
+            "id": "copyright_text",
+            "label": "Copyright Text"
         }
-  ]
-
+    ]
 }
 {% endschema %}

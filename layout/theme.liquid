@@ -9,14 +9,14 @@
     {{'theme.css' | asset_url | stylesheet_tag}}
     {{content_for_header}}
   </head>
-  <body class="{{ template }}">
+  <body class="{{ template }}" :class="$store.mobileMenu.open && 'overflow-hidden'" x-data>
     {% section 'navigation' %}
     <main>
       {{content_for_layout}}
     </main>
     {% section 'footer' %}
     
-    {{'//unpkg.com/alpinejs' | script_tag}}
-    {{'theme.js' | asset_url | script_tag}}
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <script src="{{'theme.js' | asset_url}}"></script>
   </body>
 </html>
