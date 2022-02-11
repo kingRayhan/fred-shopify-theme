@@ -1,11 +1,43 @@
 {
-    "name": "Home Page",
-    "sections": {
-        "banner": {
-            "type": "banner"
-        }
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg"
+      }
     },
-    "order": [
-        "banner"
-    ]
+    "16445930999107cfef": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "product": "fred-packable-rain-poncho",
+        "image_position": "right"
+      }
+    },
+    "16445931772495a9bd": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
+        "product": "fred-padlock-keychain",
+        "image_position": "left"
+      }
+    },
+    "1644593201457d2aa0": {
+      "type": "2-col-image",
+      "settings": {
+        "image_left": "shopify:\/\/shop_images\/model-in-neutral-colors-by-window.jpg",
+        "image_right": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "left_content_title": "Left Content",
+        "left_content": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>",
+        "right_content_title": "Right Content",
+        "right_content": "<p><strong>Lorem Ipsum<\/strong>is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s<\/p>"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "16445930999107cfef",
+    "16445931772495a9bd",
+    "1644593201457d2aa0"
+  ]
 }
