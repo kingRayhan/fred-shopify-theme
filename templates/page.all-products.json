@@ -1,0 +1,11 @@
+{
+    "name": "Home Page",
+    "sections": {
+        "banner": {
+            "type": "banner"
+        }
+    },
+    "order": [
+        "banner"
+    ]
+}
