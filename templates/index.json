@@ -5,9 +5,27 @@
       "settings": {
         "banner_image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg"
       }
+    },
+    "16445930999107cfef": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "product": "fred-packable-rain-poncho",
+        "image_position": "right"
+      }
+    },
+    "16445931772495a9bd": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
+        "product": "fred-padlock-keychain",
+        "image_position": "left"
+      }
     }
   },
   "order": [
-    "banner"
+    "banner",
+    "16445930999107cfef",
+    "16445931772495a9bd"
   ]
 }
