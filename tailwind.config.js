@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         accent: "#8de971",
         dark: "#181818",
+        yellow: "#FEFF67",
       },
       fontFamily: {
         Akkurat: ["Akkurat"],

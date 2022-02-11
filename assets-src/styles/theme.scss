@@ -14,6 +14,10 @@
   font-display: swap;
 }
 
+body {
+  @apply text-dark;
+}
+
 .wrapper {
   @apply max-w-6xl mx-4 lg:mx-auto;
 }
