@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "plugins/slick";
+@import "plugins/slick-theme";
+
+@font-face {
+  font-family: "Akkurat";
+  src: url("/Akkurat-Light.woff2") format("woff2"),
+    url("/Akkurat-Light.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
 .wrapper {
   @apply max-w-6xl mx-4 lg:mx-auto;
 }

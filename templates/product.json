@@ -1,0 +1,42 @@
+{
+    "name": "Product Template",
+    "sections": {
+        "main": {
+            "type": "main-product",
+            "blocks": {
+                "title": {
+                    "type": "title",
+                    "settings": {
+                        "text_style": "uppercase",
+                        "text": "{{ product.vendor }}"
+                    }
+                },
+                "description": {
+                    "type": "description"
+                },
+                "variants": {
+                    "type": "variants"
+                },
+                "add_to_cart": {
+                    "type": "add_to_cart"
+                }
+            },
+            "block_order": [
+                "title",
+                "description",
+                "variants",
+                "add_to_cart"
+            ],
+            "settings": {
+                "show_banner": true
+            }
+        },
+        "recommended": {
+            "type": "recommended-products"
+        }
+    },
+    "order": [
+        "main",
+        "recommended"
+    ]
+}

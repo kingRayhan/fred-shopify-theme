@@ -1,0 +1,95 @@
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+
+<section class="{{section.id}} product">
+    <!-- Header -->
+    {% if section.settings.show_banner %}
+    <div class="h-screen bg-top product__banner"></div>
+    {% endif %}
+
+    <!-- Product Info -->
+    <div class="grid grid-cols-1 md:grid-cols-2">
+        <div class="relative min-h-96">
+            {% if product.metafields.fred.video_poster.value != blank %}
+                <img src="{{ product.metafields.fred.video_poster.value | img_url: 'master' }}" />
+            {% endif %}
+            <!-- Play button -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-20 h-20 absolute top-[50%] fill-current text-white left-[50%] transform -translate-x-[50%] -translate-y-[50%]" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd" />
+            </svg>
+        </div>
+        <div class="flex flex-col p-20 space-y-5">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'title' %}
+                        <h2 class="text-2xl font-light">{{ product.title }} <span class="text-lg font-light">{{product.price | money}}</span></h2>
+                    {% when 'description' %}
+                        <div>
+                            {{ product.description }}
+                        </div>
+                    {% when 'variants' %}
+                    <div>
+                        <h2 class="text-2xl font-light ">Size</h2>
+                        <div class="flex space-x-3">
+                            <button>xl</button>
+                            <button>2xl</button>
+                            <button>xxl</button>
+                        </div>
+                    </div>
+                    {% when 'add_to_cart' %}
+                    <div>
+                        <button class="text-xl uppercase text-accent">add to cart</button>
+                    </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+    </div>
+
+    <!-- Recommended products -->
+    <div class="">
+
+    </div>
+</section>
+
+{%- style -%}
+.{{section.id}} .product__banner{
+    background-image: url({{product.featured_media | img_url: "master"}});
+}
+{%- endstyle -%}
+
+{% schema %}
+{
+    "name": "Product Information",
+    "settings": [
+        {
+           "type": "checkbox",
+           "id": "show_banner",
+           "default": true,
+           "label": "Show Banner"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "title",
+            "name": "Title",
+            "limit": 1
+        },
+        {
+            "type": "description",
+            "name": "Description",
+            "limit": 1
+        },
+        {
+            "type": "variants",
+            "name": "Variants",
+            "limit": 1
+        },
+        {
+            "type": "add_to_cart",
+            "name": "Add to Cart",
+            "limit": 1
+        }
+    ]
+}
+{% endschema %}

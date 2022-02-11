@@ -1,7 +1,9 @@
 <div class="p-6 md:w-80">
-    <img 
+    <a href="{{ product.url }}">
+        <img 
         src="{{ product.featured_media | img_url: 'master' }}" alt="{{product.featured_media.alt}}" 
         class="hidden object-cover w-full h-96 md:block">
+    </a>
     <div class="mt-4">
         <h3 class="uppercase md:text-xl">
             <a href="{{product.handle}}">

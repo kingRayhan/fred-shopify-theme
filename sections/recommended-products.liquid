@@ -1,0 +1,19 @@
+{{ 'slick.js' | asset_url | script_tag }}
+
+<div class="slider">
+    <h1 class="uppercase  font-Akkurat">
+        Explore other products
+    </h1>
+</div>
+
+
+{% javascript %}
+    $(document).on("ready", function () {
+        $(".regular").slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 3,
+        });
+    });
+{% endjavascript %}

@@ -4,7 +4,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        accent: "#89EB7A",
+        accent: "#8de971",
+        dark: "#181818",
+      },
+      fontFamily: {
+        Akkurat: ["Akkurat"],
       },
     },
   },
