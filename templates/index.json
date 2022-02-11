@@ -1,11 +1,13 @@
 {
-    "name": "Home Page",
-    "sections": {
-        "banner": {
-            "type": "banner"
-        }
-    },
-    "order": [
-        "banner"
-    ]
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+        "banner_image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg"
+      }
+    }
+  },
+  "order": [
+    "banner"
+  ]
 }
