@@ -1,11 +1,12 @@
 {
-    "name": "Journal Page",
-    "sections": {
-        "gallery": {
-            "type": "image-gallery"
-        }
-    },
-    "order": [
-        "gallery"
-    ]
+  "sections": {
+    "gallery": {
+      "type": "image-gallery",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "gallery"
+  ]
 }
