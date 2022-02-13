@@ -14,9 +14,10 @@
       "footer": {
         "type": "footer",
         "settings": {
-          "bg_color": "#ddd",
-          "primary_menu": "",
-          "secondary_menu": "",
+          "bg_color": "#dddddd",
+          "primary_menu": "footer-1",
+          "secondary_menu": "footer-secondary",
+          "logo": "shopify:\/\/shop_images\/2022-02-08_16-09-removebg-preview.png",
           "copyright_text": ""
         }
       }
