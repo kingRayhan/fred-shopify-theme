@@ -919,6 +919,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-9{
   grid-column: span 9 / span 9;
 }
+.float-left{
+  float: left;
+}
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -926,6 +929,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mx-2{
   margin-left: 0.5rem;
   margin-right: 0.5rem;
+}
+.my-32{
+  margin-top: 8rem;
+  margin-bottom: 8rem;
 }
 .my-3{
   margin-top: 0.75rem;
@@ -1015,6 +1022,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: -moz-max-content;
   width: max-content;
 }
+.w-96{
+  width: 24rem;
+}
 .w-20{
   width: 5rem;
 }
@@ -1074,9 +1084,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
-.grid-cols-4{
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-}
 .grid-cols-1{
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1109,9 +1116,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .gap-2{
   gap: 0.5rem;
-}
-.gap-4{
-  gap: 1rem;
 }
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;

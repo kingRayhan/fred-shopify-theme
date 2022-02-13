@@ -1,61 +1,49 @@
-<div class="max-w-6xl mx-auto">
-    <div class="grid grid-cols-4 gap-4">
-    <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
-    </div>
-     <div>
-        <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60" alt="">
+{{ 'masonry.js' | asset_url | script_tag}}
+{{ 'zoom.js' | asset_url | script_tag}}
+
+<div class="max-w-6xl mx-auto my-32">
+    <div class="gallery">
+        <div class="grid-sizer"></div>
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'gallery-image' %}
+                <div {{ block.shopify_attributes }} class="float-left gallery__item w-96">
+                    <img 
+                        data-zoomable
+                        src="{{block.settings.image | img_url: 'master'}}" 
+                        alt="{{block.settings.image.alt}}" 
+                    />
+                </div>                    
+            {% endcase %}
+        {% endfor %}
     </div>
 </div>
-</div>
+
+{% javascript %}
+mediumZoom('[data-zoomable]')
+$('.gallery').masonry({
+  itemSelector: '.gallery__item',
+  columnWidth: 160,
+  columnWidth: '.grid-sizer',
+  percentPosition: true
+});
+{% endjavascript %}
+
+{% schema %}
+{
+   "name": "Image Gallery",
+   "blocks": [
+        {
+           "name": "Image",
+           "type": "gallery-image",
+           "settings": [
+               {
+                   "type": "image_picker",
+                   "id": "image",
+                   "label": "Image"
+               }
+           ]
+        }
+   ]
+}
+{% endschema %}
