@@ -113,9 +113,18 @@
       ],
       "settings": {
       }
+    },
+    "164478987005272e30": {
+      "type": "collection-carousel",
+      "settings": {
+        "title": "<span class=\"text-accent\">Explore<\/span> the collection",
+        "collection": "frontpage",
+        "count": 12
+      }
     }
   },
   "order": [
-    "gallery"
+    "gallery",
+    "164478987005272e30"
   ]
 }
