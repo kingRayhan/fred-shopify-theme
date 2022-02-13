@@ -938,11 +938,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-4{
   margin-top: 1rem;
 }
-.mb-10{
-  margin-bottom: 2.5rem;
-}
 .mb-6{
   margin-bottom: 1.5rem;
+}
+.mb-10{
+  margin-bottom: 2.5rem;
 }
 .mt-\[40px\]{
   margin-top: 40px;
@@ -1086,16 +1086,25 @@ Ensure the default browser behavior of the `hidden` attribute.
 .items-center{
   align-items: center;
 }
+.justify-end{
+  justify-content: flex-end;
+}
 .justify-center{
   justify-content: center;
 }
 .justify-between{
   justify-content: space-between;
 }
-.space-x-4 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-x-reverse: 0;
-  margin-right: calc(1rem * var(--tw-space-x-reverse));
-  margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+.gap-14{
+  gap: 3.5rem;
+}
+.gap-2{
+  gap: 0.5rem;
+}
+.space-y-2 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-y-reverse: 0;
+  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .space-x-1 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
@@ -1111,11 +1120,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-space-x-reverse: 0;
   margin-right: calc(0.75rem * var(--tw-space-x-reverse));
   margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
-}
-.space-y-2 > :not([hidden]) ~ :not([hidden]){
-  --tw-space-y-reverse: 0;
-  margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
-  margin-bottom: calc(0.5rem * var(--tw-space-y-reverse));
 }
 .space-x-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-x-reverse: 0;
@@ -1216,6 +1220,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-position: bottom;
      object-position: bottom;
 }
+.p-7{
+  padding: 1.75rem;
+}
 .p-20{
   padding: 5rem;
 }
@@ -1276,6 +1283,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 0.875rem;
   line-height: 1.25rem;
 }
+.text-\[11px\]{
+  font-size: 11px;
+}
+.text-\[8px\]{
+  font-size: 8px;
+}
 .text-lg{
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1311,6 +1324,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-text-opacity: 1;
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
+.text-gray-500{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
 .text-slate-300{
   --tw-text-opacity: 1;
   color: rgb(203 213 225 / var(--tw-text-opacity));
@@ -1325,10 +1342,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-gray-600{
   --tw-text-opacity: 1;
   color: rgb(75 85 99 / var(--tw-text-opacity));
-}
-.text-gray-500{
-  --tw-text-opacity: 1;
-  color: rgb(107 114 128 / var(--tw-text-opacity));
 }
 .text-cyan-500{
   --tw-text-opacity: 1;
@@ -2132,6 +2145,11 @@ body {
   background-color: rgb(59 130 246 / var(--tw-bg-opacity));
 }
 
+.hover\:text-gray-500:hover{
+  --tw-text-opacity: 1;
+  color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
 .hover\:underline:hover{
   -webkit-text-decoration-line: underline;
           text-decoration-line: underline;
@@ -2166,12 +2184,18 @@ body {
 }
 
 @media (min-width: 768px){
+  .md\:order-none{
+    order: 0;
+  }
   .md\:col-span-8{
     grid-column: span 8 / span 8;
   }
   .md\:mx-4{
     margin-left: 1rem;
     margin-right: 1rem;
+  }
+  .md\:mt-3{
+    margin-top: 0.75rem;
   }
   .md\:mt-0{
     margin-top: 0px;
@@ -2194,11 +2218,39 @@ body {
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .md\:flex-row{
+    flex-direction: row;
+  }
+  .md\:flex-col{
+    flex-direction: column;
+  }
   .md\:items-center{
     align-items: center;
   }
+  .md\:gap-0{
+    gap: 0px;
+  }
+  .md\:space-y-0 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-y-reverse: 0;
+    margin-top: calc(0px * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(0px * var(--tw-space-y-reverse));
+  }
+  .md\:space-x-4 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(1rem * var(--tw-space-x-reverse));
+    margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .md\:p-16{
+    padding: 4rem;
+  }
   .md\:p-10{
     padding: 2.5rem;
+  }
+  .md\:text-\[14px\]{
+    font-size: 14px;
+  }
+  .md\:text-\[11px\]{
+    font-size: 11px;
   }
   .md\:text-5xl{
     font-size: 3rem;
@@ -2208,7 +2260,22 @@ body {
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
+  .md\:text-gray-500{
+    --tw-text-opacity: 1;
+    color: rgb(107 114 128 / var(--tw-text-opacity));
+  }
   .md\:line-clamp-none{
     -webkit-line-clamp: unset;
+  }
+}
+
+@media (min-width: 1024px){
+  .lg\:space-x-20 > :not([hidden]) ~ :not([hidden]){
+    --tw-space-x-reverse: 0;
+    margin-right: calc(5rem * var(--tw-space-x-reverse));
+    margin-left: calc(5rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .lg\:text-\[21px\]{
+    font-size: 21px;
   }
 }

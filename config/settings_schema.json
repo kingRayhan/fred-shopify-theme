@@ -29,5 +29,70 @@
         "default": "#f5f5f5"
       }
     ]
+  },
+  {
+    "name": "Social Links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "social_facebook",
+        "label": "Facebook",
+        "default": "https://www.facebook.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_twitter",
+        "label": "Twitter",
+        "default": "https://twitter.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_instagram",
+        "label": "Instagram",
+        "default": "https://www.instagram.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_youtube",
+        "label": "YouTube",
+        "default": "https://www.youtube.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_google",
+        "label": "Google",
+        "default": "https://plus.google.com/+Shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_pinterest",
+        "label": "Pinterest",
+        "default": "https://www.pinterest.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_linkedin",
+        "label": "LinkedIn",
+        "default": "https://www.linkedin.com/company/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_vimeo",
+        "label": "Vimeo",
+        "default": "https://vimeo.com/shopify"
+      },
+      {
+        "type": "text",
+        "id": "social_tumblr",
+        "label": "Tumblr",
+        "default": "https://shopify.tumblr.com/"
+      },
+      {
+        "type": "text",
+        "id": "social_dribbble",
+        "label": "Dribbble",
+        "default": "https://dribbble.com/shopify"
+      }
+    ]
   }
 ]

@@ -1,14 +1,31 @@
-<footer class="{{section.id}} footer-wrapper">
-    <nav class="flex space-x-4">
-        {% for link in section.settings.primary_menu.links %}
-            <a class="uppercase {% if link.active %}underline{% endif %}" href="{{link.url}}">{{link.title}}</a>
-        {% endfor %}
-    </nav>
+<footer class="{{section.id}} footer-wrapper p-7 md:p-16 gap-14 md:gap-0 flex md:flex-col justify-center">
+    <div class="flex items-center justify-between">
+        <nav class="flex flex-col space-y-2 md:flex-row md:space-y-0 md:space-x-4 lg:space-x-20">
+            {% for link in section.settings.primary_menu.links %}
+                <a class="uppercase text-[11px] md:text-[14px] lg:text-[21px] {% if link.active %}underline{% endif %} hover:text-gray-500" href="{{link.url}}">{{link.title}}</a>
+            {% endfor %}
+        </nav>
+        <div class="hidden md:block">
+            {% render 'logo', logo: section.settings.logo has_logo: true  %}
+        </div>
+    </div>
+
+    <div class="order-first md:order-none md:mt-3">
+        <div class="mb-6 md:hidden">
+            {% render 'logo', logo: section.settings.logo has_logo: true  %}
+        </div>
+        <div class="flex flex-col justify-end gap-2 md:gap-0 md:space-x-4 md:items-center md:flex-row">
+            {% for link in section.settings.secondary_menu.links %}
+                <a class="uppercase text-[11px] md:text-gray-500 {% if link.active %}underline{% endif %} hover:text-gray-500" href="{{link.url}}">{{link.title}}</a>
+            {% endfor %}
+
+            <div class="text-gray-500 md:text-[11px] text-[8px]">{{section.settings.copyright_text}}</div>
+        </div>
+    </div>
 </footer>
 
 {%- style -%}
 .{{section.id}}.footer-wrapper{
-    height: 147px;
     background-color: {{ section.settings.bg_color }};
 }
 {%- endstyle -%}
