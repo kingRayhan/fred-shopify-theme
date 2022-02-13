@@ -4,8 +4,8 @@
     "theme_name": "Artisan",
     "theme_version": "1.0.0",
     "theme_author": "Rayhan",
-    "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes/os20/themes-by-shopify/dawn",
-    "theme_support_url": "https://support.shopify.com/"
+    "theme_documentation_url": "https:\/\/help.shopify.com\/manual\/online-store\/themes\/os20\/themes-by-shopify\/dawn",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
   },
   {
     "name": "Colors",
@@ -37,61 +37,61 @@
         "type": "text",
         "id": "social_facebook",
         "label": "Facebook",
-        "default": "https://www.facebook.com/shopify"
+        "default": "https:\/\/www.facebook.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_twitter",
         "label": "Twitter",
-        "default": "https://twitter.com/shopify"
+        "default": "https:\/\/twitter.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_instagram",
         "label": "Instagram",
-        "default": "https://www.instagram.com/shopify"
+        "default": "https:\/\/www.instagram.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_youtube",
         "label": "YouTube",
-        "default": "https://www.youtube.com/shopify"
+        "default": "https:\/\/www.youtube.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_google",
         "label": "Google",
-        "default": "https://plus.google.com/+Shopify"
+        "default": "https:\/\/plus.google.com\/+Shopify"
       },
       {
         "type": "text",
         "id": "social_pinterest",
         "label": "Pinterest",
-        "default": "https://www.pinterest.com/shopify"
+        "default": "https:\/\/www.pinterest.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_linkedin",
         "label": "LinkedIn",
-        "default": "https://www.linkedin.com/company/shopify"
+        "default": "https:\/\/www.linkedin.com\/company\/shopify"
       },
       {
         "type": "text",
         "id": "social_vimeo",
         "label": "Vimeo",
-        "default": "https://vimeo.com/shopify"
+        "default": "https:\/\/vimeo.com\/shopify"
       },
       {
         "type": "text",
         "id": "social_tumblr",
         "label": "Tumblr",
-        "default": "https://shopify.tumblr.com/"
+        "default": "https:\/\/shopify.tumblr.com\/"
       },
       {
         "type": "text",
         "id": "social_dribbble",
         "label": "Dribbble",
-        "default": "https://dribbble.com/shopify"
+        "default": "https:\/\/dribbble.com\/shopify"
       }
     ]
   }
