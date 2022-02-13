@@ -14,6 +14,14 @@
         "image_position": "right"
       }
     },
+    "164477926884b7a81e": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
+        "product": "fred-padlock-keychain",
+        "image_position": "right"
+      }
+    },
     "1644593201457d2aa0": {
       "type": "2-col-image",
       "settings": {
@@ -29,6 +37,7 @@
   "order": [
     "banner",
     "16445930999107cfef",
+    "164477926884b7a81e",
     "1644593201457d2aa0"
   ]
 }
