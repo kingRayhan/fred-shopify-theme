@@ -1,12 +1,13 @@
 {
-    "name": "Category Template",
-    "layout": "page",
-    "sections": {
-        "main": {
-            "type": "page-content"
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "layout": "page",
+  "sections": {
+    "main": {
+      "type": "page-content",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
