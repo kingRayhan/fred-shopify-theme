@@ -74,6 +74,24 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
           }
+        },
+        "5a233c9c-e6ed-4d97-ad7d-f9c5f46a3447": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/business-team-meeting-boardroom.jpg"
+          }
+        },
+        "516e1ad3-4c95-45e5-a399-3c28095b8250": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-people-share-a-kiss-in-the-kitchen-cooking.jpg"
+          }
+        },
+        "9c7b1819-ec56-4fcc-9207-f9124a18e7a4": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-sits-on-their-couch-next-to-their-dog.jpg"
+          }
         }
       },
       "block_order": [
@@ -88,7 +106,10 @@
         "efbe9ca9-581a-4cd7-8de0-214ea61406b7",
         "63b8a7ac-6942-48a7-b4be-95369d1fd599",
         "b6cd91cb-dd74-4261-88f4-5586d6dd2774",
-        "1a47d4dd-6cf7-4969-be2c-77346c7f15c2"
+        "1a47d4dd-6cf7-4969-be2c-77346c7f15c2",
+        "5a233c9c-e6ed-4d97-ad7d-f9c5f46a3447",
+        "516e1ad3-4c95-45e5-a399-3c28095b8250",
+        "9c7b1819-ec56-4fcc-9207-f9124a18e7a4"
       ],
       "settings": {
       }
