@@ -1,4 +1,4 @@
-<div x-data class="fixed flex items-start justify-between w-full p-4 md:p-10">
+<div x-data class="fixed z-50 flex items-start justify-between w-full p-4 md:p-10">
     <!-- Mobile Logo -->
     <div class="md:hidden">
         {% if section.settings.mobile_logo != blank %}
@@ -32,7 +32,7 @@
 </div>
 
 <!-- Desktop Logo -->
-<div class="transform top-1/2 translate-y-[-50%] pl-10 fixed hidden md:block">
+<div class="transform z-50 top-1/2 translate-y-[-50%] pl-10 fixed hidden md:block">
     {% render 'logo' logo: section.settings.logo, has_logo: section.settings.logo != blank %}
 </div>
 

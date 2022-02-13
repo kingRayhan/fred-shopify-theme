@@ -1,8 +1,9 @@
 - [x] Home Desktop
 - [x] Home Mobile
 
-- [] Category Desktop
-- [] Category Mobile
+- [x] Category Desktop
+- [x] Category Mobile
+      Preview: https://fred-editions.myshopify.com/pages/category
 
 - [] Journal Desktop
 - [] Journal Mobile

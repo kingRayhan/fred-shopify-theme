@@ -898,6 +898,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .right-8{
   right: 2rem;
 }
+.z-50{
+  z-index: 50;
+}
 .order-first{
   order: -9999;
 }
@@ -1220,8 +1223,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-position: bottom;
      object-position: bottom;
 }
-.p-7{
-  padding: 1.75rem;
+.p-6{
+  padding: 1.5rem;
 }
 .p-20{
   padding: 5rem;
@@ -1231,9 +1234,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-8{
   padding: 2rem;
-}
-.p-6{
-  padding: 1.5rem;
 }
 .px-10{
   padding-left: 2.5rem;
@@ -2246,11 +2246,16 @@ body {
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
   }
-  .md\:p-8{
-    padding: 2rem;
-  }
   .md\:p-10{
     padding: 2.5rem;
+  }
+  .md\:px-14{
+    padding-left: 3.5rem;
+    padding-right: 3.5rem;
+  }
+  .md\:py-6{
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
   }
   .md\:text-\[14px\]{
     font-size: 14px;
