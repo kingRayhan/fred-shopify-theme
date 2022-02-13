@@ -2,6 +2,94 @@
   "sections": {
     "gallery": {
       "type": "image-gallery",
+      "blocks": {
+        "2263d2be-6975-4ed8-a35c-7ad7f30206be": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/silver-lamp-on-a-white-table-next-to-books.jpg"
+          }
+        },
+        "0645edba-354f-4b7b-9939-a6d326ad5b28": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/close-up-of-a-person-arm-wearing-a-smartwatch.jpg"
+          }
+        },
+        "3e2a8a51-6532-4731-91ee-985dd90900fa": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/glass-with-iced-red-beverage-reflects-on-a-white-table.jpg"
+          }
+        },
+        "bf09f3f5-41cd-48ad-88d7-fea6fcea080e": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/two-people-surfing-in-blue-choppy-water.jpg"
+          }
+        },
+        "9bc69d88-895e-45fe-a504-eaac792d4f75": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/green-and-white-marbled-coloring.jpg"
+          }
+        },
+        "dee85999-ba52-46d3-a0c1-d5d72f4274eb": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-bridge-sitting-in-thick-pink-and-purple-fog.jpg"
+          }
+        },
+        "a263f5ed-dfe2-401b-8864-56b3a0a2a341": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/person-fishing-on-the-beach-is-silhouetted-at-sunset.jpg"
+          }
+        },
+        "1587221b-442c-45f2-a83d-49447cba7023": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/business-team-meeting-boardroom.jpg"
+          }
+        },
+        "efbe9ca9-581a-4cd7-8de0-214ea61406b7": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg"
+          }
+        },
+        "63b8a7ac-6942-48a7-b4be-95369d1fd599": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg"
+          }
+        },
+        "b6cd91cb-dd74-4261-88f4-5586d6dd2774": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/a-hand-removes-a-sweater-from-a-clothing-rack.jpg"
+          }
+        },
+        "1a47d4dd-6cf7-4969-be2c-77346c7f15c2": {
+          "type": "gallery-image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/rack-of-womens-clothing.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "2263d2be-6975-4ed8-a35c-7ad7f30206be",
+        "0645edba-354f-4b7b-9939-a6d326ad5b28",
+        "3e2a8a51-6532-4731-91ee-985dd90900fa",
+        "bf09f3f5-41cd-48ad-88d7-fea6fcea080e",
+        "9bc69d88-895e-45fe-a504-eaac792d4f75",
+        "dee85999-ba52-46d3-a0c1-d5d72f4274eb",
+        "a263f5ed-dfe2-401b-8864-56b3a0a2a341",
+        "1587221b-442c-45f2-a83d-49447cba7023",
+        "efbe9ca9-581a-4cd7-8de0-214ea61406b7",
+        "63b8a7ac-6942-48a7-b4be-95369d1fd599",
+        "b6cd91cb-dd74-4261-88f4-5586d6dd2774",
+        "1a47d4dd-6cf7-4969-be2c-77346c7f15c2"
+      ],
       "settings": {
       }
     }
