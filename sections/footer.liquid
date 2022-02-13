@@ -1,11 +1,17 @@
-<footer class="{{section.id}} bg-slate-300">
-    <h1>Footer ff</h1>
+<footer class="{{section.id}} footer-wrapper">
     <nav class="flex space-x-4">
         {% for link in section.settings.primary_menu.links %}
             <a class="uppercase {% if link.active %}underline{% endif %}" href="{{link.url}}">{{link.title}}</a>
         {% endfor %}
     </nav>
 </footer>
+
+{%- style -%}
+.{{section.id}}.footer-wrapper{
+    height: 147px;
+    background-color: {{ section.settings.bg_color }};
+}
+{%- endstyle -%}
 
 {% schema %}
 {
@@ -15,7 +21,7 @@
             "type": "color",
             "id": "bg_color",
             "label": "Background Color",
-            "default": "#ddd",
+            "default": "#e6e6e6",
             "info": "Footer background color"
         },
         {

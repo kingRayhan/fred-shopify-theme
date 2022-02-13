@@ -9,6 +9,14 @@
     {{'theme.css' | asset_url | stylesheet_tag}}
     {{'https://code.jquery.com/jquery-2.2.0.min.js' | script_tag}}
     {{content_for_header}}
+
+    <style>
+      :root{
+        --color_accent: {{settings.color_accent}};
+        --color_body_text: {{settings.color_body_text}};
+        --color_main_bg: {{settings.color_main_bg}};
+      }
+    </style>
   </head>
   <body class="{{ template }}" :class="$store.mobileMenu.open && 'overflow-hidden'" x-data>
     {% section 'navigation' %}

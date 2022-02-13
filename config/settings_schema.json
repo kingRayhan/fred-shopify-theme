@@ -6,5 +6,28 @@
     "theme_author": "Rayhan",
     "theme_documentation_url": "https://help.shopify.com/manual/online-store/themes/os20/themes-by-shopify/dawn",
     "theme_support_url": "https://support.shopify.com/"
+  },
+  {
+    "name": "Colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "color_accent",
+        "label": "Accent",
+        "default": "#8de971"
+      },
+      {
+        "type": "color",
+        "id": "color_body_text",
+        "label": "Text",
+        "default": "#181818"
+      },
+      {
+        "type": "color",
+        "id": "color_main_bg",
+        "label": "Background",
+        "default": "#f5f5f5"
+      }
+    ]
   }
 ]

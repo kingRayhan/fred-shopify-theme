@@ -1168,17 +1168,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(17 24 39 / var(--tw-bg-opacity));
 }
-.bg-slate-300{
-  --tw-bg-opacity: 1;
-  background-color: rgb(203 213 225 / var(--tw-bg-opacity));
-}
 .bg-indigo-600{
   --tw-bg-opacity: 1;
   background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 .bg-accent{
-  --tw-bg-opacity: 1;
-  background-color: rgb(141 233 113 / var(--tw-bg-opacity));
+  background-color: var(--color_accent);
 }
 .bg-yellow{
   --tw-bg-opacity: 1;
@@ -1321,8 +1316,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: rgb(203 213 225 / var(--tw-text-opacity));
 }
 .text-accent{
-  --tw-text-opacity: 1;
-  color: rgb(141 233 113 / var(--tw-text-opacity));
+  color: var(--color_accent);
 }
 .text-gray-700{
   --tw-text-opacity: 1;
@@ -1658,9 +1652,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-style: normal;
   font-display: swap;
 }
-body{
-  --tw-text-opacity: 1;
-  color: rgb(24 24 24 / var(--tw-text-opacity));
+body {
+  background-color: var(--color_main_bg);
+  color: var(--color_body_text);
 }
 
 .wrapper{

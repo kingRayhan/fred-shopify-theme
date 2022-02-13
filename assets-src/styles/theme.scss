@@ -15,7 +15,8 @@
 }
 
 body {
-  @apply text-dark;
+  background-color: var(--color_main_bg);
+  color: var(--color_body_text);
 }
 
 .wrapper {
