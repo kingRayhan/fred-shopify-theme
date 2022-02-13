@@ -1,13 +1,12 @@
-{{ 'masonry.js' | asset_url | script_tag}}
-{{ 'zoom.js' | asset_url | script_tag}}
+
 
 <div class="max-w-6xl mx-auto my-32">
     <div class="gallery">
-        <div class="grid-sizer"></div>
+        <div class="w-1/4 grid-sizer"></div>
         {% for block in section.blocks %}
             {% case block.type %}
                 {% when 'gallery-image' %}
-                <div {{ block.shopify_attributes }} class="float-left gallery__item w-96">
+                <div {{ block.shopify_attributes }} class="float-left gallery__item">
                     <img 
                         data-zoomable
                         src="{{block.settings.image | img_url: 'master'}}" 
@@ -18,16 +17,40 @@
         {% endfor %}
     </div>
 </div>
+{{ 'imagesloaded.js' | asset_url | script_tag}}
+{{ 'isotope.js' | asset_url | script_tag}}
+{{ 'zoom.js' | asset_url | script_tag}}
 
 {% javascript %}
 mediumZoom('[data-zoomable]')
-$('.gallery').masonry({
+
+var $grid = $('.gallery').isotope({
   itemSelector: '.gallery__item',
-  columnWidth: 160,
-  columnWidth: '.grid-sizer',
-  percentPosition: true
+  percentPosition: true,
+  masonry: {
+    columnWidth: '.grid-sizer'
+  }
 });
+
+$grid.imagesLoaded().progress( function() {
+  $grid.isotope('layout');
+});
+
 {% endjavascript %}
+
+{% stylesheet %}
+    .gallery{}
+    .gallery__item{
+        width: calc(25% - 14px);
+        margin: 7px;
+    }
+    @media (max-width: 768px) {
+        .gallery__item{
+            width: calc(50% - 14px);
+        }
+    }
+{% endstylesheet %}
+
 
 {% schema %}
 {

@@ -1,0 +1,62 @@
+{{ 'slick.js' | asset_url | script_tag }}
+<div class="container mx-auto">
+    <hr class="border-dark" />
+</div>
+<div class="my-8 text-center md:my-16">
+    <h2 class="text-2xl uppercase">
+        {{section.settings.title}}
+    </h2>
+</div>
+<div class="overflow-hidden slider">
+    {% for product in section.settings.collection.products limit: section.settings.count %}
+        <div class="p-2"> 
+            <a href="{{ product.url }}">
+                <img class="object-cover" src="{{product.featured_image | img_url: 'master'}}" alt="{{ product.featured_image.alt }}">
+            </a>
+        </div>
+    {% endfor %}
+</div>
+
+{% javascript %}
+    $(document).on("ready", function () {
+        $(".slider").slick({
+            dots: false,
+            infinite: true,
+            slidesToShow: 5,
+            slidesToScroll: 5,
+        });
+    });
+{% endjavascript %}
+
+{% schema %}
+{
+   "name": "Collection Carousel",
+   "settings": [
+        {
+            "type": "html",
+            "id": "title",
+            "label": "Title",
+            "default": "<span class='text-accent'>Explore</span> the collection"
+        },
+        {
+            "type": "collection",
+            "id": "collection",
+            "label": "Collection"
+        },
+        {
+            "type": "range",
+            "id": "count",
+            "min": 3,
+            "max": 30,
+            "step": 1,
+            "label": "Products to show",
+            "default": 6
+        }
+   ],
+   "presets": [
+        {
+            "name": "Collection Carousel"
+        }
+    ]
+}
+{% endschema %}

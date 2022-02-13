@@ -5,7 +5,7 @@ module.exports = {
     extend: {
       colors: {
         accent: "var(--color_accent)",
-        dark: "#181818",
+        dark: "var(--color_body_text)",
         yellow: "#FEFF67",
       },
       fontFamily: {

@@ -5,7 +5,7 @@
 - [x] Category Mobile
       Preview: https://fred-editions.myshopify.com/pages/category
 
-- [] Journal Desktop
+- [] Journal Desktop -> masonry need to be fixed
 - [] Journal Mobile
 
 - [] Product Desktop
