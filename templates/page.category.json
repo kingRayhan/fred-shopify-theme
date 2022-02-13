@@ -1,12 +1,10 @@
 {
-    "name": "Category Templatef",
-    "layout": "page",
     "sections": {
-        "main": {
-            "type": "page-content"
+        "2-col-image": {
+            "type": "2-col-image"
         }
     },
     "order": [
-        "main"
+        "2-col-image"
     ]
 }
