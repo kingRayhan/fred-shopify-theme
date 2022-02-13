@@ -1,10 +1,45 @@
 {
-    "sections": {
-        "2-col-image": {
-            "type": "2-col-image"
-        }
+  "sections": {
+    "2-col-image": {
+      "type": "2-col-image",
+      "settings": {
+        "image_left": "shopify:\/\/shop_images\/iphone-detects-qr-code.jpg",
+        "image_right": "shopify:\/\/shop_images\/flatlay-of-jade-face-roller-laying-on-a-grey-stone.jpg",
+        "left_content_title": "",
+        "left_content": "",
+        "right_content_title": "",
+        "right_content": ""
+      }
     },
-    "order": [
-        "2-col-image"
-    ]
+    "16447798236db1445a": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/model-with-leather-jacket-over-shoulders.jpg",
+        "product": "fred-mini-wrist-pouch",
+        "image_position": "right"
+      }
+    },
+    "16447798756b24b891": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/close-up-of-a-pine-tree-showing-texture-of-pine-needles.jpg",
+        "product": "fred-webbing-trimmed-parka-shell",
+        "image_position": "left"
+      }
+    },
+    "1644779925254ffdbc": {
+      "type": "product",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/hands-slice-red-pepper-on-wooden-cutting-board.jpg",
+        "product": "fred-padlock-keychain",
+        "image_position": "right"
+      }
+    }
+  },
+  "order": [
+    "2-col-image",
+    "16447798236db1445a",
+    "16447798756b24b891",
+    "1644779925254ffdbc"
+  ]
 }
