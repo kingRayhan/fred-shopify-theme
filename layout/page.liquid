@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{{page_title}}</title>
     
+    <style>
+      :root{
+        --color_accent: {{settings.color_accent}};
+        --color_body_text: {{settings.color_body_text}};
+        --color_main_bg: {{settings.color_main_bg}};
+      }
+    </style>
     {{'theme.css' | asset_url | stylesheet_tag}}
 
     {{content_for_header}}

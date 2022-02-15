@@ -8,6 +8,14 @@
     
     {{'theme.css' | asset_url | stylesheet_tag}}
 
+    <style>
+      :root{
+        --color_accent: {{settings.color_accent}};
+        --color_body_text: {{settings.color_body_text}};
+        --color_main_bg: {{settings.color_main_bg}};
+      }
+    </style>
+
     {{content_for_header}}
     <script src="//unpkg.com/alpinejs" defer></script>
   </head>

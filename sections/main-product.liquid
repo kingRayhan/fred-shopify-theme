@@ -72,7 +72,7 @@
                         {% when 'variants' %}
                             {{ product_varients }}
                         {% when 'add_to_cart' %}
-                            <input type="hidden" name="id" id="varient_id">
+                            <input type="hidden" name="id" :value="$store.product.selectedVariant.id">
                             <div>
                                 <button class="text-xl uppercase text-accent">add to cart</button>
                             </div>
@@ -109,7 +109,6 @@ document.addEventListener("alpine:init", () => {
                 return option === this.selectedVariantOptionValues[i]
             })
         });
-        document.getElementById("varient_id").value = this.selectedVariant.id;
     }
   });
 });
