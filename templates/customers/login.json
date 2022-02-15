@@ -1,12 +1,13 @@
 {
-    "name": "Login Page",
-    "layout": "blank",
-    "sections": {
-        "main": {
-            "type": "template-login"
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "layout": "blank",
+  "sections": {
+    "main": {
+      "type": "template-login",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
