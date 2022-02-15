@@ -9,8 +9,8 @@
 - [] Journal Mobile
   Preview: https://fred-editions.myshopify.com/pages/journal
 
-- [] Product Desktop
-- [] Product Mobile
+- [x] Product Desktop
+- [x] Product Mobile
 
 - [] About Desktop
 - [] About Mobile
@@ -35,3 +35,13 @@
 
 - [] Contact Desktop
 - [] Contact Desktop
+
+## Urgent pages
+
+- [] Signup
+- [] Login
+
+if: guest
+Signup Page -> password.liquid
+if customer:
+Login Page
