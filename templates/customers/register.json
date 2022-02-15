@@ -1,0 +1,12 @@
+{
+    "name": "Register Page",
+    "layout": "blank",
+    "sections": {
+        "main": {
+            "type": "template-register"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

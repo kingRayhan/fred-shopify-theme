@@ -950,6 +950,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .col-span-8{
   grid-column: span 8 / span 8;
 }
+.col-span-2{
+  grid-column: span 2 / span 2;
+}
+.col-span-10{
+  grid-column: span 10 / span 10;
+}
 .col-span-3{
   grid-column: span 3 / span 3;
 }
@@ -998,11 +1004,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .mt-\[40px\]{
   margin-top: 40px;
 }
-.mt-36{
-  margin-top: 9rem;
-}
 .mt-6{
   margin-top: 1.5rem;
+}
+.mt-36{
+  margin-top: 9rem;
 }
 .mt-8{
   margin-top: 2rem;
@@ -1078,11 +1084,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .w-8{
   width: 2rem;
 }
-.w-3\/12{
-  width: 25%;
-}
 .w-\[400px\]{
   width: 400px;
+}
+.w-3\/12{
+  width: 25%;
 }
 .w-20{
   width: 5rem;
@@ -1170,6 +1176,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .gap-5{
   gap: 1.25rem;
 }
+.gap-6{
+  gap: 1.5rem;
+}
+.gap-1{
+  gap: 0.25rem;
+}
 .space-y-2 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));
@@ -1244,16 +1256,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .bg-accent{
   background-color: var(--color_accent);
 }
-.bg-gray-500{
-  --tw-bg-opacity: 1;
-  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
-}
 .bg-yellow{
   --tw-bg-opacity: 1;
   background-color: rgb(254 255 103 / var(--tw-bg-opacity));
 }
 .bg-transparent{
   background-color: transparent;
+}
+.bg-gray-500{
+  --tw-bg-opacity: 1;
+  background-color: rgb(107 114 128 / var(--tw-bg-opacity));
 }
 .bg-dark{
   background-color: var(--color_body_text);

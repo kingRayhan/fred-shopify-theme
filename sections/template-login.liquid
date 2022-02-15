@@ -1,0 +1,79 @@
+<div class="relative grid h-screen grid-cols-12">
+    <div class="hidden col-span-4 bg-center bg-cover md:block left-image"></div>
+    <div class="col-span-12 bg-center bg-cover md:col-span-8 right-image">
+        <div class="flex items-start justify-center h-full md:items-center">
+            <div class="w-[400px] mt-[40px] md:mt-0 p-8 bg-yellow">
+                <div>
+                    <h2 class="text-3xl uppercase md:text-5xl font-Akkurat">{{ section.settings.title }}</h2>
+                </div>
+                <div class="mt-6"></div>
+                {% form 'customer_login', class: 'flex flex-col gap-6' %}                    
+                    <div class="flex flex-col gap-1">
+                        {% for field in form.errors %}
+                            <div class="text-red-500">
+                                <b>{{ form.errors.translated_fields[field] }}</b> - {{ form.errors.messages[field] }}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="grid items-center grid-cols-12 col-span-8">
+                        <label for="email" class="col-span-2">Email</label>
+                        <input name="contact[email]" type="text" id="email" class="col-span-10 bg-transparent border-b-2 border-black focus:outline-none">
+                    </div>
+
+                    <div class="grid items-center grid-cols-12 col-span-8">
+                        <label for="password" class="col-span-3">Password</label>
+                        <input name="customer[password]" id="password" type="password" class="col-span-9 bg-transparent border-b-2 border-black focus:outline-none">
+                    </div>
+
+                    <div>
+                        <button type="submit" class="col-span-4 text-sm font-semibold">Signin</button>
+                    </div>
+                {% endform %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Desktop Logo -->
+<div class="transform top-1/2 translate-y-[-50%] pl-10 fixed hidden md:block">
+    {% render 'logo' logo: section.settings.logo, has_logo: section.settings.logo != blank %}
+</div>
+
+{%- style -%}
+.left-image{
+    background-image: url({{section.settings.image_left | img_url: "master"}});
+}
+.right-image{
+    background-image: url({{section.settings.image_right | img_url: "master"}});
+}
+{%- endstyle -%}
+
+{% schema %}
+{
+   "name": "Comming Soon",
+   "settings": [
+        {
+            "type": "image_picker",
+            "id": "logo",
+            "label": "Logo"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_left",
+            "label": "Left Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_right",
+            "label": "Right Image"
+        },
+        {
+            "type": "text",
+            "id": "title",
+            "label": "Title",
+            "default": "Login"
+        }
+   ]
+}
+{% endschema %}
