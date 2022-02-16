@@ -1,8 +1,8 @@
 <div class="grid grid-cols-1 md:grid-cols-2">
-    <div class="group hidden md:block relative max-h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+    <div class="group hidden md:block relative h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
         <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_left | img_url: 'master'}}" alt="{{section.settings.image_left.alt}}">
     </div>
-    <div class="group relative max-h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+    <div class="group relative h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
         <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_right | img_url: 'master'}}" alt="{{section.settings.image_right.alt}}">
          <div class="absolute inset-0 grid w-8/12 mx-auto text-center place-content-center">
             {{page.content}}
