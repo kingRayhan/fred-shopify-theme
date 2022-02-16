@@ -1,11 +1,12 @@
 {
-    "name": "About Page",
-    "sections": {
-        "main": {
-            "type": "template-about"
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "sections": {
+    "main": {
+      "type": "template-about",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }

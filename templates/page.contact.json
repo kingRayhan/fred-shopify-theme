@@ -1,11 +1,17 @@
 {
-    "name": "About Page",
-    "sections": {
-        "main": {
-            "type": "template-contact"
-        }
-    },
-    "order": [
-        "main"
-    ]
+  "sections": {
+    "main": {
+      "type": "template-contact",
+      "settings": {
+        "image_left": "shopify:\/\/shop_images\/SH-20211210-FRED-EDITIONS-PLATES-0006.jpg",
+        "image_right": "shopify:\/\/shop_images\/silver-lamp-on-a-white-table-next-to-books.jpg",
+        "email": "rayhan095@gmail.com",
+        "phone": "+8801836980760",
+        "social_media": "@rayhan095"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
 }
