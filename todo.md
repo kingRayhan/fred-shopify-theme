@@ -14,11 +14,11 @@
 
 - [] About Desktop
 - [] About Mobile
-  issues: mobile and desktop are not the same
-  Preview: https://fred-editions.myshopify.com/pages/about
 
 - [] Contact Desktop
 - [] Contact Mobile
+  issues: mobile and desktop are not the same
+  Preview: https://fred-editions.myshopify.com/pages/contact
 
 - [] Connect Desktop
 - [] Connect Mobile
