@@ -899,6 +899,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .relative{
   position: relative;
 }
+.inset-0{
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
 .top-0{
   top: 0px;
 }
@@ -1058,6 +1064,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .max-h-\[650px\]{
   max-height: 650px;
 }
+.max-h-screen{
+  max-height: 100vh;
+}
 .min-h-\[250px\]{
   min-height: 250px;
 }
@@ -1083,6 +1092,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .w-8{
   width: 2rem;
+}
+.w-8\/12{
+  width: 66.666667%;
 }
 .w-\[400px\]{
   width: 400px;
@@ -1139,6 +1151,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 .grid-cols-12{
   grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -2318,6 +2333,9 @@ body {
   }
   .md\:w-80{
     width: 20rem;
+  }
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
   .md\:flex-row{
     flex-direction: row;

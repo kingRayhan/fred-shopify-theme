@@ -1,1 +1,71 @@
-<h1>Template about</h1>
+<div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="group hidden md:block relative max-h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_left | img_url: 'master'}}" alt="{{section.settings.image_left.alt}}">
+    </div>
+    <div class="group relative max-h-screen bg-cover bg-center {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image_right | img_url: 'master'}}" alt="{{section.settings.image_right.alt}}">
+         <div class="absolute inset-0 grid w-8/12 mx-auto text-center place-content-center">
+            {{page.content}}
+            <div>
+                {% if section.settings.email %}
+                <div>
+                    <b class="font-semibold text-accent">Email:</b>
+                    <a href="mailto:{{section.settings.email}}">{{section.settings.email}}</a>
+                </div>
+                {% endif %}
+                
+                {% if section.settings.phone %}
+                <div>
+                    <b class="font-semibold text-accent">Phone:</b>
+                    <a href="tel:{{section.settings.phone}}">{{section.settings.phone}}</a>
+                </div>
+                {% endif %}
+
+                {% if section.settings.social_media %}
+                <div>
+                    <b class="font-semibold text-accent">Social media:</b>
+                    <span>{{section.settings.social_media}}</span>
+                </div>
+                {% endif %}
+            </div>
+         </div>
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Two Column Image",
+   "settings": [
+        {
+            "type": "image_picker",
+            "id": "image_left",
+            "label": "Image Left"
+        },
+        {
+            "type": "image_picker",
+            "id": "image_right",
+            "label": "Image Right"
+        },
+        {
+            "type": "text",
+            "id": "email",
+            "label": "Email"
+        },
+        {
+            "type": "text",
+            "id": "phone",
+            "label": "Phone"
+        },
+        {
+            "type": "text",
+            "id": "social_media",
+            "label": "Social media"
+        }
+   ],
+    "presets": [
+        {
+            "name": "Two Column Image"
+        }
+    ]
+}
+{% endschema %}

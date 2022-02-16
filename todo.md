@@ -14,6 +14,7 @@
 
 - [] About Desktop
 - [] About Mobile
+  issues: mobile and desktop are not the same
 
 - [] Contact Desktop
 - [] Contact Mobile
