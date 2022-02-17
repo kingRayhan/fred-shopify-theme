@@ -1,12 +1,10 @@
 {
-  "sections": {
-    "main": {
-      "type": "template-about",
-      "settings": {
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
+    "sections": {
+        "banner": {
+            "type": "banner"
+        }
+    },
+    "order": [
+        "banner"
+    ]
 }

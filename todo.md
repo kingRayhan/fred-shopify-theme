@@ -12,28 +12,27 @@
 - [x] Product Desktop
 - [x] Product Mobile
 
+WIP Today:
+
 - [] About Desktop
 - [] About Mobile
-
-- [] Contact Desktop
-- [] Contact Mobile
-  issues: mobile and desktop are not the same
-  Preview: https://fred-editions.myshopify.com/pages/contact
-
-- [] Connect Desktop
-- [] Connect Mobile
-
-- [] Size Guide Desktop
-- [] Size Guide Mobile
-
-- [] Shipping Return Desktop
-- [] Shipping Return Mobile
 
 - [] Terms & Conditions Desktop
 - [] Terms & Conditions Mobile
 
 - [] Privacy Policy Desktop
 - [] Privacy Policy Mobile
+
+- [x] Contact Desktop
+- [] Contact Mobile
+  issues: mobile and desktop are not the same
+  Preview: https://fred-editions.myshopify.com/pages/contact
+
+- [] Size Guide Desktop
+- [] Size Guide Mobile
+
+- [] Shipping Return Desktop
+- [] Shipping Return Mobile
 
 - [] Contact Desktop
 - [] Contact Desktop

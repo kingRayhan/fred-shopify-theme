@@ -28,6 +28,7 @@
 
                     <div>
                         <button type="submit" class="col-span-4 text-sm font-semibold">Signin</button>
+                        <a class="skb_btn_acc" href="{{ routes.account_register_url }}">Create an account</a>
                     </div>
                 {% endform %}
             </div>
@@ -46,6 +47,11 @@
 }
 .right-image{
     background-image: url({{section.settings.image_right | img_url: "master"}});
+}
+a.skb_btn_acc {
+    float: right;
+    font-weight: 600;
+    font-size: 15px;
 }
 {%- endstyle -%}
 
