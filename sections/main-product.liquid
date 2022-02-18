@@ -1,5 +1,8 @@
 {%- assign current_variant = product.selected_or_first_available_variant -%}
 {%- assign featured_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image -%}
+{{'video-modal.css' | asset_url | stylesheet_tag}}
+
+<script src="{{ 'video-modal.js' | asset_url }}"></script>
 <script type="application/ld+json" id="product-json">{{ product | json }}</script>
 <script type="application/ld+json" id="product-selected-variant-json">{{ product.selected_or_first_available_variant | json }}</script>
 <script type="application/ld+json" id="product-variants-with-values-json">
@@ -15,13 +18,15 @@
 </script>
 
 {% capture video_promo %}
+{% if product.metafields.fred.video_id.value != blank %}
 <div class="relative w-1/2 min-h-96">
     <img src="{{ product.metafields.fred.video_poster.value | img_url: 'master' }}" />
     <!-- Play button -->
-    <button>
+    <button class="video-button" data-video-id="{{ product.metafields.fred.video_id.value }}">
         <svg version="1.2" class="absolute top-[50%] fill-current left-[50%] transform -translate-x-[50%] -translate-y-[50%]" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 121" width="120" height="121"><defs><clipPath clipPathUnits="userSpaceOnUse" id="cp1"><path d="m-179-904h960v2047h-960z" /></clipPath></defs><style>.s0{opacity: .5;fill:#ffffff}.s1{fill:#ffffff}</style><g clip-path="url(#cp1)"><path class="s0" d="m60 121c-33.2 0-60-26.9-60-60.3c0-33.3 26.8-60.2 60-60.2c33.2 0 60 26.9 60 60.2c0 33.4-26.8 60.3-60 60.3z" /><path class="s1" d="m95.5 62.2l-58.5 33.8v-67.5z" /></g></svg>
     </button>
 </div>
+{% endif %}
 {% endcapture %}
 
 {% capture product_varients %}
@@ -88,6 +93,14 @@
     background-image: url({{featured_image | img_url: "master"}});
 }
 {%- endstyle -%}
+
+{% if product.metafields.fred.video_provider != blank %}
+<script>
+    $('.video-button').modalVideo({
+        channel: '{{product.metafields.fred.video_provider.value}}'
+    });
+</script>
+{% endif %}
 
 {% javascript %}
 var productJSON = JSON.parse(document.getElementById("product-json").textContent)
