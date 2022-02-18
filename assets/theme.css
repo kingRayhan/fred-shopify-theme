@@ -1163,6 +1163,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.my-20{
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+.my-5{
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+}
 .mt-6{
   margin-top: 1.5rem;
 }
@@ -1465,6 +1473,10 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-bg-opacity: 1;
   background-color: rgb(37 99 235 / var(--tw-bg-opacity));
 }
+.bg-black{
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
 .bg-opacity-30{
   --tw-bg-opacity: 0.3;
 }
@@ -1509,6 +1521,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .p-8{
   padding: 2rem;
 }
+.p-1{
+  padding: 0.25rem;
+}
 .py-20{
   padding-top: 5rem;
   padding-bottom: 5rem;
@@ -1546,6 +1561,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-center{
   text-align: center;
 }
+.text-right{
+  text-align: right;
+}
 .font-Akkurat{
   font-family: Akkurat;
 }
@@ -1578,10 +1596,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .text-base{
   font-size: 1rem;
   line-height: 1.5rem;
-}
-.text-5xl{
-  font-size: 3rem;
-  line-height: 1;
 }
 .font-light{
   font-weight: 300;
@@ -1648,6 +1662,9 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .opacity-50{
   opacity: 0.5;
+}
+.filter{
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }
 .transition-opacity{
   transition-property: opacity;

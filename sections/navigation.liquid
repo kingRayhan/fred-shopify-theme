@@ -15,12 +15,14 @@
     </nav>
     <div class="flex items-center space-x-1">
         {% if section.settings.show_cart_button %}
-        <button class="flex space-x-2">
+        <a href="/cart" class="flex space-x-2">
             <span class="uppercase">
                 {{section.settings.cart_button_label}}
             </span>
-            <span class="grid w-6 h-6 text-white rounded-full place-content-center bg-slate-800">1</span>
-        </button>
+            <span class="grid w-6 h-6 text-white rounded-full place-content-center bg-slate-800">
+                {{cart.item_count}}
+            </span>
+        </a>
         {% endif %}
 
         <button x-data class="md:hidden" @click="$store.mobileMenu.toggle()">
