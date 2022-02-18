@@ -1,10 +1,12 @@
 {
-    "sections": {
-        "banner": {
-            "type": "banner"
-        }
-    },
-    "order": [
-        "banner"
-    ]
+  "sections": {
+    "banner": {
+      "type": "banner",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner"
+  ]
 }
