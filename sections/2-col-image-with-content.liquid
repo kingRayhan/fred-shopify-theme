@@ -1,0 +1,50 @@
+<div class="grid grid-cols-2">
+   <div>
+      <div>
+         <h1>Hello</h1>
+      </div>
+   </div>
+   <div class="group relative bg-cover bg-center md:max-h-[850px] max-h-[650px] {% if section.settings.image_position == 'left' %}order-first{% endif %}">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image | img_url: 'master'}}" alt="{{section.settings.image.alt}}">
+        <div class="absolute top-0 bottom-0 left-0 right-0 grid transition-opacity duration-500 bg-slate-800 bg-opacity-30 place-content-center">
+            <div class="max-w-[70%] mx-auto text-center text-white">
+                {% if section.settings.content_title != blank %}
+                    <h2 class="text-xl uppercase">{{ section.settings.content_title }}</h2>
+                {% endif %}
+                {% if section.settings.content != blank %}
+                    <div class="line-clamp-5 md:line-clamp-none">
+                        {{section.settings.content}}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Image with content",
+   "settings": [
+      {
+         "type": "image_picker",
+         "id": "image",
+         "label": "Image"
+      },
+      {
+         "type": "text",
+         "id": "content_title",
+         "label": "Content title"
+      },
+      {
+         "type": "richtext",
+         "id": "content",
+         "label": "Content"
+      }
+   ],
+   "presets": [
+      {
+         "name": "Image with content"
+      }
+   ]
+}
+{% endschema %}

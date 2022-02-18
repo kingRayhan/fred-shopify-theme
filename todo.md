@@ -23,6 +23,9 @@ WIP Today:
 - [] Privacy Policy Desktop
 - [] Privacy Policy Mobile
 
+- [] Shipping Return Desktop
+- [] Shipping Return Mobile
+
 - [x] Contact Desktop
 - [] Contact Mobile
   issues: mobile and desktop are not the same
@@ -31,8 +34,8 @@ WIP Today:
 - [] Size Guide Desktop
 - [] Size Guide Mobile
 
-- [] Shipping Return Desktop
-- [] Shipping Return Mobile
+- [] Password:
+  give a feedback after subscribe
 
 - [] Contact Desktop
 - [] Contact Desktop
