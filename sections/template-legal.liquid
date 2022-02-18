@@ -1,0 +1,22 @@
+<div>
+    <div class="relative h-screen bg-center bg-cover group">
+        <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image | img_url: 'master'}}" alt="{{section.settings.image.alt}}">
+    </div>
+    
+    <div>
+        <h1>Content</h1>
+    </div>
+</div>
+
+{% schema %}
+{
+   "name": "Legal Page Template",
+   "settings": [
+       {
+           "type": "image_picker",
+           "id": "image",
+           "label": "Image"
+       }
+   ]
+}
+{% endschema %}

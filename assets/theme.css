@@ -995,6 +995,9 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-left: 0.75rem;
   margin-right: 0.75rem;
 }
+.mt-6{
+  margin-top: 1.5rem;
+}
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -1009,9 +1012,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .mt-\[40px\]{
   margin-top: 40px;
-}
-.mt-6{
-  margin-top: 1.5rem;
 }
 .mt-36{
   margin-top: 9rem;
@@ -1176,11 +1176,11 @@ Ensure the default browser behavior of the `hidden` attribute.
 .justify-between{
   justify-content: space-between;
 }
-.gap-14{
-  gap: 3.5rem;
-}
 .gap-2{
   gap: 0.5rem;
+}
+.gap-14{
+  gap: 3.5rem;
 }
 .gap-3{
   gap: 0.75rem;
@@ -1249,6 +1249,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-border-opacity: 1;
   border-color: rgb(209 213 219 / var(--tw-border-opacity));
 }
+.bg-\[\#F5F5F5\]{
+  --tw-bg-opacity: 1;
+  background-color: rgb(245 245 245 / var(--tw-bg-opacity));
+}
+.bg-slate-500\/10{
+  background-color: rgb(100 116 139 / 0.1);
+}
 .bg-slate-800{
   --tw-bg-opacity: 1;
   background-color: rgb(30 41 59 / var(--tw-bg-opacity));
@@ -1316,11 +1323,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   -o-object-position: bottom;
      object-position: bottom;
 }
-.p-2{
-  padding: 0.5rem;
-}
 .p-6{
   padding: 1.5rem;
+}
+.p-2{
+  padding: 0.5rem;
 }
 .p-20{
   padding: 5rem;
@@ -1330,6 +1337,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .p-8{
   padding: 2rem;
+}
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
 .px-10{
   padding-left: 2.5rem;
@@ -1367,13 +1378,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 .font-Akkurat{
   font-family: Akkurat;
 }
-.text-xl{
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-}
 .text-2xl{
   font-size: 1.5rem;
   line-height: 2rem;
+}
+.text-xl{
+  font-size: 1.25rem;
+  line-height: 1.75rem;
 }
 .text-sm{
   font-size: 0.875rem;
@@ -1397,14 +1408,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-size: 1rem;
   line-height: 1.5rem;
 }
+.font-light{
+  font-weight: 300;
+}
 .font-semibold{
   font-weight: 600;
 }
 .font-medium{
   font-weight: 500;
-}
-.font-light{
-  font-weight: 300;
 }
 .uppercase{
   text-transform: uppercase;
@@ -1412,12 +1423,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .italic{
   font-style: italic;
 }
+.text-accent{
+  color: var(--color_accent);
+}
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
-}
-.text-accent{
-  color: var(--color_accent);
 }
 .text-gray-400{
   --tw-text-opacity: 1;
@@ -2355,6 +2366,9 @@ body {
     --tw-space-x-reverse: 0;
     margin-right: calc(1rem * var(--tw-space-x-reverse));
     margin-left: calc(1rem * calc(1 - var(--tw-space-x-reverse)));
+  }
+  .md\:p-0{
+    padding: 0px;
   }
   .md\:p-10{
     padding: 2.5rem;

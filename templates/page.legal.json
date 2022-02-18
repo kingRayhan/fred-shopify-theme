@@ -1,0 +1,11 @@
+{
+    "name": "Legal page",
+    "sections": {
+        "main": {
+            "type": "template-legal"
+        }
+    },
+    "order": [
+        "main"
+    ]
+}

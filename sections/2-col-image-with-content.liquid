@@ -1,21 +1,27 @@
-<div class="grid grid-cols-2">
-   <div>
-      <div>
-         <h1>Hello</h1>
+<div class="grid md:grid-cols-2">
+   <div class="flex items-center justify-center bg-[#F5F5F5]">
+      <div class="flex flex-col gap-2 p-6 py-20 md:p-0 md:w-80">
+         {% if section.settings.content_title != blank %}
+            <h2 class="text-2xl font-light text-accent">{{section.settings.content_title}}</h2>
+         {% endif %}
+
+         {% if section.settings.content_description != blank %}
+            {{section.settings.content_description}}
+         {% endif %}
       </div>
    </div>
    <div class="group relative bg-cover bg-center md:max-h-[850px] max-h-[650px] {% if section.settings.image_position == 'left' %}order-first{% endif %}">
         <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image | img_url: 'master'}}" alt="{{section.settings.image.alt}}">
-        <div class="absolute top-0 bottom-0 left-0 right-0 grid transition-opacity duration-500 bg-slate-800 bg-opacity-30 place-content-center">
-            <div class="max-w-[70%] mx-auto text-center text-white">
-                {% if section.settings.content_title != blank %}
-                    <h2 class="text-xl uppercase">{{ section.settings.content_title }}</h2>
-                {% endif %}
-                {% if section.settings.content != blank %}
-                    <div class="line-clamp-5 md:line-clamp-none">
-                        {{section.settings.content}}
-                    </div>
-                {% endif %}
+        <div class="absolute inset-0 flex items-center justify-center transition-opacity duration-500 bg-slate-500/10">
+            <div class="text-center max-w-[70%]">
+               {% if section.settings.image_title != blank %}
+                  <h2 class="text-xl text-white uppercase">{{ section.settings.image_title }}</h2>
+               {% endif %}
+               {% if section.settings.image_description != blank %}
+                  <div class="text-white line-clamp-5 md:line-clamp-none">
+                     {{section.settings.image_description}}
+                  </div>
+               {% endif %}
             </div>
         </div>
     </div>
@@ -26,9 +32,35 @@
    "name": "Image with content",
    "settings": [
       {
+         "type": "radio",
+         "id": "image_position",
+         "label": "Image Position",
+         "default": "right",
+         "options": [
+            {
+               "value": "left",
+               "label": "Left Side"
+            },
+            {
+               "value": "right",
+               "label": "Right Side"
+            }
+         ]
+      },
+      {
          "type": "image_picker",
          "id": "image",
          "label": "Image"
+      },
+      {
+         "type": "text",
+         "id": "image_title",
+         "label": "Image title"
+      },
+      {
+         "type": "richtext",
+         "id": "image_description",
+         "label": "Image description"
       },
       {
          "type": "text",
@@ -37,8 +69,8 @@
       },
       {
          "type": "richtext",
-         "id": "content",
-         "label": "Content"
+         "id": "content_description",
+         "label": "Content description"
       }
    ],
    "presets": [

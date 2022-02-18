@@ -14,8 +14,8 @@
 
 WIP Today:
 
-- [] About Desktop
-- [] About Mobile
+- [x] About Desktop
+- [x] About Mobile
 
 - [] Terms & Conditions Desktop
 - [] Terms & Conditions Mobile
