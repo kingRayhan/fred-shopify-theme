@@ -17,13 +17,13 @@ WIP Today:
 - [x] About Desktop
 - [x] About Mobile
 
-- [] Terms & Conditions Desktop
+- [x] Terms & Conditions Desktop
 - [] Terms & Conditions Mobile
 
-- [] Privacy Policy Desktop
+- [x] Privacy Policy Desktop
 - [] Privacy Policy Mobile
 
-- [] Shipping Return Desktop
+- [x] Shipping Return Desktop
 - [] Shipping Return Mobile
 
 - [x] Contact Desktop

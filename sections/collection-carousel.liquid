@@ -1,20 +1,22 @@
 {{ 'slick.js' | asset_url | script_tag }}
-<div class="container mx-auto mt-6">
-    <hr class="border-dark" />
-</div>
-<div class="my-8 text-center md:my-16">
-    <h2 class="text-2xl uppercase">
-        {{section.settings.title}}
-    </h2>
-</div>
-<div class="overflow-hidden slider">
-    {% for product in section.settings.collection.products limit: section.settings.count %}
-        <div class="p-2"> 
-            <a href="{{ product.url }}">
-                <img class="object-cover" src="{{product.featured_image | img_url: 'master'}}" alt="{{ product.featured_image.alt }}">
-            </a>
-        </div>
-    {% endfor %}
+<div class="relative z-50 bg-white">
+    <div class="container mx-auto mt-6">
+        <hr class="border-dark" />
+    </div>
+    <div class="my-8 text-center md:my-16">
+        <h2 class="text-2xl uppercase">
+            {{section.settings.title}}
+        </h2>
+    </div>
+    <div class="overflow-hidden slider">
+        {% for product in section.settings.collection.products limit: section.settings.count %}
+            <div class="p-2"> 
+                <a href="{{ product.url }}">
+                    <img class="object-cover" src="{{product.featured_image | img_url: 'master'}}" alt="{{ product.featured_image.alt }}">
+                </a>
+            </div>
+        {% endfor %}
+    </div>
 </div>
 
 {% javascript %}

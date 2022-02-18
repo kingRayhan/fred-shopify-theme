@@ -1,12 +1,11 @@
 {
+  "name": "Legal page",
   "sections": {
-    "banner": {
-      "type": "banner",
-      "settings": {
-      }
+    "main": {
+      "type": "template-legal"
     }
   },
   "order": [
-    "banner"
+    "main"
   ]
 }

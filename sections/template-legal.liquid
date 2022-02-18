@@ -1,16 +1,20 @@
-<div>
-    <div class="relative h-screen bg-center bg-cover group">
+<div class="relative flex justify-center w-full">
+    <div class="fixed top-0 left-0 w-1/2 h-screen bg-center bg-cover group">
         <img class="object-cover object-bottom w-full h-full" src="{{section.settings.image | img_url: 'master'}}" alt="{{section.settings.image.alt}}">
     </div>
-    
-    <div>
-        <h1>Content</h1>
-    </div>
+    <div class="w-1/2 ml-[50%]">
+        <div class="mx-auto p-28">
+            <h1 class="text-2xl font-semibold text-accent">{{ page.title }}</h1>
+            <div class="prose prose-base max-w-none">
+                {{ page.content }}
+            </div>
+        </div>
+    </div>    
 </div>
 
 {% schema %}
 {
-   "name": "Legal Page Template",
+   "name": "Split Image Page content",
    "settings": [
        {
            "type": "image_picker",
